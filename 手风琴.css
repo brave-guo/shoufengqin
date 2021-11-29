@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#imgList{
+    width: 1000px;
+    overflow: hidden;
+    list-style: none;
+}
+
+#imgList>li{
+    width: 180px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    box-sizing: border-box;
+    position: relative;
+}
+#imgList>li>img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 10px auto;
+            list-style: none;
+        }
+
+        li {
+            /* position: absolute; */
+            display: inline-block;
+            width: 200px;
+            overflow: hidden;
+        }
+
+        img {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <img src="./images/bclsy1.jpg" alt="">
+        </li>
+        <li>
+
+            <img src="./images/bclsy2.jpg" alt="">
+        </li>
+        <li>
+
+            <img src="./images/bclsy3.jpg" alt="">
+        </li>
+        <li>
+
+            <img src="./images/bclsy4.jpg" alt="">
+        </li>
+    </ul>
+    <!-- 先引入jq文件 -->
+    <script src="./jquery.mini.js"></script>
+    
+    <script>
+        $(function () {
+            $("li").mouseenter(function () {
+                $(this).stop().animate({
+                    width: 400
+                }).siblings().stop().animate({
+                    width: 100
+                })
+            })
+            $("li").mouseleave(function () {
+                $(this).stop().animate({
+                    width: 200
+                }).siblings().stop().animate({
+                    width: 200
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
